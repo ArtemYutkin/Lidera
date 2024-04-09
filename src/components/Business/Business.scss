@@ -1,0 +1,246 @@
+.Business {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 220px 0;
+
+    &__title {
+        font-family: Gilroy-Bold;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 52px;
+        color: transparent;    
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(to right, rgba(219, 45, 143, 1) 0%, rgba(45, 17, 120, 1) 100%);
+        margin: 0 0 32px 0;
+    }
+    &__wrapper {
+        width: 100%;
+        max-width: 1128px;
+        overflow: hidden;
+
+    }
+    &__cardsRow {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 0 32px 0;
+        transition: translate;
+        transition-property: transform;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-in-out;
+        gap: 24px;
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            height: 590px;
+            width: 360px;
+
+            &__pic {
+                width: 360px;
+                height: 398px;
+                border-radius: 24px;
+                margin: 0 0 16px 0;
+                background-size: cover;
+                background-position: center;
+                box-sizing: border-box;
+            }
+            &__title {
+                height: 64px;
+                font-family: Gilroy-Bold;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                color: #32334C;
+                white-space: pre-wrap;
+                margin: 0 0 12px 0;
+            }
+            &__adress {
+                font-family: Gilroy-Regular;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: #32334C;
+                margin: 0 0 12px 0;
+            }
+            &__subtitle {
+                max-height: 66px;
+                font-family: Gilroy-SemiBold;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                color: #32334C;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+    }
+    &__navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &-button {
+            width: 40px;
+            height: 40px;
+            background-color: #FFF0F5;
+            border: none;
+            border-radius: 32px;
+            padding: 12px;
+            margin-right: 8px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .react-multi-carousel-dot{
+            position: relative;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #32334C;
+            margin: 0 8px 0 0;
+            transition: all 0.2s;
+            &-list {
+                bottom: 10px;
+            }
+            &::before {
+                transition: transform 0.3s;
+                // opacity: 0;
+                transform: scale(0);
+                content: '';
+                display: block;
+                position: absolute;
+                border: 1px solid#9D097C;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                top: -9px;
+                left: -9px;
+            }
+            &--active {
+                // transition: margin s;
+                position: relative;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #9D097C;
+                margin: 0 16px 0 8px;
+                &::before {
+                    // transition: opacity 0.3s;
+                    transform: scale(1);
+                }
+            }
+            & button {
+                display: none;
+            }
+        }
+    }
+}
+.react-multi-carousel{
+    &-dot{
+        &-list {
+            &.Business__navigation {
+                bottom: 10px;
+            }
+        }
+    }
+
+    &-list {
+        &.carousel-container {
+            align-items: flex-start;
+            height: 638px;
+            overflow: visible;
+        }
+    }
+}
+.react-multiple-carousel__arrow {
+    top: 604px;
+    &.react-multiple-carousel__arrow--left {
+        left: 465px;
+        min-width: 40px;
+        min-height: 40px;
+        background-color: #FFF0F5;
+        padding: 6px 6px 9px 6px;
+        font-size: 0;
+        &::before {
+            content: url('../../assets/arrowLeft.svg');
+        }
+        &:hover {
+            background-color: #FFF0F5;
+        }
+    }
+    &.react-multiple-carousel__arrow--right {
+        right: 470px;
+        min-width: 40px;
+        min-height: 40px;
+        background-color: #FFF0F5;
+        padding: 6px 6px 9px 6px;
+        font-size: 0;
+        &::before {
+            content: url('../../assets/arrowRight.svg');
+        }
+        &:hover {
+            background-color: #FFF0F5;
+        }
+    }
+}
+@media screen and (min-width:360px) and (max-width:450px) {
+    .Business {
+        align-items: center;
+        margin: 0 0 80px 0; 
+    
+        &__title {
+            font-size: 24px; 
+            line-height: 32px; 
+            margin: 0 0 12px 0; 
+            max-width: 328px; 
+            margin-right: 248px;
+        }
+        &__wrapper {
+            max-width: 328px;
+            overflow: visible;
+    
+        }
+        &__cardsRow {
+            overflow: scroll;
+    
+            &-card {
+                height: 484px; 
+                width: 240px; 
+    
+                &__pic {
+                    width: 240px; 
+                    height: 260px; 
+                }
+                &__title {
+                    height: 96px; 
+                }
+            }
+        }
+        &__navigation {
+            display: none; 
+        }
+    }
+
+    .react-multi-carousel{
+        &-dot{
+            &-list {
+                &.Business__navigation {
+                    bottom: 120px;
+                    left: -100px;
+                }
+            }
+        }
+        &-list {
+            &.carousel-container {
+                overflow: hidden;
+            }
+        }
+    }
+}

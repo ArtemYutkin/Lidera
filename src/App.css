@@ -1,0 +1,29 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    width: 100%;
+    height: 100%;
+  background-color: white;
+}
+body {
+    margin: 0%;
+}
+.Content-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1128px;
+}
+main {
+  width: 100vw;
+}
+@media screen and (min-width: 360px) and (max-width:450px) {
+  #root {
+    height: 4700px;
+  }
+  .Content-layout {
+    max-width: 328px;
+  }
+}
+

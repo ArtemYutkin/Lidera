@@ -1,0 +1,44 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./fonts/Gilroy-Medium.ttf');
+}
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url('./fonts/Gilroy-Regular.ttf');
+}
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('./fonts/Gilroy-Bold.ttf');
+}
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url('./fonts/Gilroy-Light.ttf');
+}
+@font-face {
+  font-family: Gilroy-SemiBold;
+  src: url('./fonts/Gilroy-SemiBold.ttf');
+}
+@font-face {
+  font-family: Inter-Bold;
+  src: url('./fonts/Inter-Bold.ttf');
+}
+@font-face {
+  font-family: Inter-Regular;
+  src: url('./fonts/Inter-Regular.ttf');
+}
+
+
